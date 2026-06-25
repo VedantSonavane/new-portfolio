@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Sora';
+  src: url('../assets/Fonts/Sora-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+*
+{
+  font-family: 'Sora', sans-serif;
+}
+.circular-gallery {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: grab;
+}
+
+.circular-gallery:active {
+  cursor: grabbing;
+}
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite;
+}
+
+.group:hover .animate-spin-slow {
+  animation-duration: 6s;
+}
+
+
+.list {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.item-wrapper {
+  position: absolute;
+  will-change: transform, width, height, opacity;
+  padding: 6px;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+}
+
+.item-wrapper > .item-img {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 50px -10px rgba(0, 0, 0, 0.2);
+}
+.logo-slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 24px 0;
+  background: #fff;
+}
+
+.logo-track-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.logo-track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  align-items: center;
+}
+
+/* ✅ YOUR BOX (converted to a reusable class) */
+.logo-item {
+  box-sizing: border-box;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 23px;
+  background: linear-gradient(
+    180deg,
+    rgba(245, 243, 240, 0) 0%,
+    rgb(245, 243, 240) 100%
+  );
+  overflow: visible;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+
+  /* ❗remove absolute so slider layout works */
+  position: relative;
+
+  border-radius: 32px;
+}
+
+/* logo sizing inside the box */
+.logo-img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;  /* tweak */
+  max-height: 100%; /* tweak */
+  object-fit: contain;
+  display: block;
+}
+
+/* optional edge fades */
+.edge-fade-left,
+.edge-fade-right {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1000px;
+  z-index: 5;
+}
+
+.edge-fade-left {
+  left: 0;
+  background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.edge-fade-right {
+  right: 0;
+  background: linear-gradient(270deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* animations (example) */
+@keyframes marqueeLeft {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes marqueeRight {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.animate-slow-left {
+  animation: marqueeLeft 300s linear infinite;
+}
+.animate-slow-right {
+  animation: marqueeRight 300s linear infinite;
+}
