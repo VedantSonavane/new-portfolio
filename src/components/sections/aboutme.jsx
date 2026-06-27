@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import aboutmeImage from "../../assets/images/aboutme.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -145,7 +146,7 @@ export default function AboutSection() {
             style={{ aspectRatio: "3/4" }}
           >
               <img
-              src="/src/assets/images/aboutme.jpg"
+              src={aboutmeImage}
               alt="Vedant Sonavane"
               className="w-full h-full object-cover object-top grayscale block"
             />

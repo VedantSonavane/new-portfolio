@@ -1,6 +1,7 @@
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import goalsGif from "../../assets/videos/goals.gif";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -61,8 +62,7 @@ export default function GoalsSection() {
       <div
         className="bg-scale absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage:
-            "url('/src/assets/videos/goals.gif')",
+          backgroundImage: `url(${goalsGif})`,
         }}
       />
 

@@ -3,11 +3,11 @@ import { Mail, Phone, FileText, Send } from "lucide-react";
 import { Squircle } from "@squircle-js/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import contactmeGif from "../../assets/videos/contactme.gif";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const RESUME_PATH = "https://raw.githubusercontent.com/VedantSonavane/resume-/main/vednew.pdf";
-const BANNER_GIF = "/src/assets/videos/contactme.gif";
 const GMAIL_COMPOSE_URL =
   "https://mail.google.com/mail/?view=cm&fs=1&to=vedantsonavane799@gmail.com";
 const WEB3FORMS_KEY = "1ba7c230-a672-4b9f-9d8a-0d1e53462919";
@@ -196,7 +196,7 @@ export default function CTASection() {
               className="relative w-full overflow-hidden shadow-[0_4px_40px_-8px_rgba(0,0,0,0.13)]"
               style={{ aspectRatio: "4/3" }}
             >
-              <img src={BANNER_GIF} alt="banner" className="w-full h-full object-cover" />
+              <img src={contactmeGif} alt="banner" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
             </Squircle>
 
