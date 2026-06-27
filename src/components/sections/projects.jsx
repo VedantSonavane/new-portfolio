@@ -338,7 +338,8 @@ export default function ProjectsSection() {
   return (
     <>
       {/* ══════════════════════════ DESKTOP ══════════════════════════════ */}
-      <div className="hidden md:block">
+      <div       id="projects"
+ className="hidden md:block">
         <div
           ref={wrapperRef}
           className="relative"
@@ -573,9 +574,7 @@ export default function ProjectsSection() {
       <div className="md:hidden flex flex-col font-['Inter','Helvetica_Neue',sans-serif]">
         {/* Intro header */}
         <div className="px-5 pt-20 pb-14 bg-[#F8FAFC]">
-          <p className="text-[11px] font-bold uppercase tracking-[0.26em] mb-7 text-[#888888]">
-            Selected Work · 2025–2026
-          </p>
+         
           <h1
             className="text-[clamp(2rem,9vw,3.75rem)] font-semibold tracking-[-0.03em] leading-[1.08] text-[#111111] mb-5"
           >

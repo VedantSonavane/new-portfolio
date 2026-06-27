@@ -192,6 +192,7 @@ export default function WorkSection() {
   return (
     <div
       ref={stickyWrapRef}
+      id="experience"
       style={{ height: `${(PROJECTS.length + 1) * 100}vh` }}
       className="relative"
     >

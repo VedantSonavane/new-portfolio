@@ -62,7 +62,7 @@ export default function GoalsSection() {
         className="bg-scale absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://i.pinimg.com/originals/39/65/ea/3965eabb21416bc6b2fef3ef157492fd.gif')",
+            "url('/src/assets/videos/goals.gif')",
         }}
       />
 

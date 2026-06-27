@@ -527,7 +527,8 @@ export default function Home() {
   return (
     <main
       ref={rootRef}
-      className="relative w-full min-h-screen overflow-hidden bg-[#F8FAFC] text-neutral-900 flex flex-col"
+      id="hero"
+      className="relative w-full min-h-screen  overflow-hidden bg-[#F8FAFC] text-neutral-900 flex flex-col"
     >
 
       {/* ── BACKGROUND: OGL gallery canvas ── */}
@@ -562,25 +563,29 @@ export default function Home() {
           <div className="mt-7 sm:mt-10 flex flex-col sm:flex-row items-center gap-2.5 sm:gap-3 w-full sm:w-auto">
 
             {/* PRIMARY */}
-            <button
-              className="reveal-btn group flex items-center justify-center gap-3 rounded-full bg-neutral-900 px-7 py-3 text-[0.8125rem] sm:text-sm text-white shadow-[0_10px_30px_rgba(0,0,0,0.12)] transition-[background-color,box-shadow] duration-200 hover:bg-neutral-800 w-full sm:w-auto"
-              onPointerDown={pressBtn}
-              onPointerUp={releaseBtn}
-              onPointerLeave={releaseBtn}
-            >
-              <span>View Selected Work</span>
-              <ArrowUpRight className="cta-arrow h-4 w-4 opacity-90 transition-transform duration-300 group-hover:-translate-y-[1px] group-hover:translate-x-[1px]" />
-            </button>
+           <button
+  className="reveal-btn group flex items-center justify-center gap-3 rounded-full bg-neutral-900 px-7 py-3 text-[0.8125rem] sm:text-sm text-white shadow-[0_10px_30px_rgba(0,0,0,0.12)] transition-[background-color,box-shadow] duration-200 hover:bg-neutral-800 w-full sm:w-auto"
+  onPointerDown={pressBtn}
+  onPointerUp={releaseBtn}
+  onPointerLeave={releaseBtn}
+  onClick={() => document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" })}
+>
+  <span>View Selected Work</span>
+  <ArrowUpRight className="cta-arrow h-4 w-4 opacity-90 transition-transform duration-300 group-hover:-translate-y-[1px] group-hover:translate-x-[1px]" />
+</button>
 
-            {/* SECONDARY */}
-            <button
-              className="reveal-btn rounded-full border border-neutral-300 bg-white/80 px-7 py-3 text-[0.8125rem] sm:text-sm font-medium text-neutral-700 backdrop-blur-sm shadow-[0_8px_24px_rgba(0,0,0,0.04)] transition-[border-color,background-color,box-shadow] duration-200 hover:border-neutral-400 hover:bg-white w-full sm:w-auto"
-              onPointerDown={pressBtn}
-              onPointerUp={releaseBtn}
-              onPointerLeave={releaseBtn}
-            >
-              Resume & Experience
-            </button>
+
+{/* SECONDARY */}
+<button
+  className="reveal-btn group flex items-center justify-center gap-3 rounded-full border border-neutral-300 bg-white/80 px-7 py-3 text-[0.8125rem] sm:text-sm font-medium text-neutral-700 backdrop-blur-sm shadow-[0_8px_24px_rgba(0,0,0,0.04)] transition-[border-color,background-color,box-shadow] duration-200 hover:border-neutral-400 hover:bg-white w-full sm:w-auto"
+  onPointerDown={pressBtn}
+  onPointerUp={releaseBtn}
+  onPointerLeave={releaseBtn}
+  onClick={() => document.querySelector("#experience")?.scrollIntoView({ behavior: "smooth" })}
+>
+  <span>Resume & Experience</span>
+  <ArrowUpRight className="cta-arrow h-4 w-4 opacity-90 transition-transform duration-300 group-hover:-translate-y-[1px] group-hover:translate-x-[1px]" />
+</button>
 
           </div>
         </div>

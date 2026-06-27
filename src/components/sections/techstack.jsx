@@ -180,15 +180,7 @@ export default function TechStackSection() {
           and the quiet confidence of tools that just work.
         </p>
 
-        {/* CTAs */}
-        <div className="mt-7 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-3">
-          <button className="flex items-center justify-center gap-3 rounded-full bg-neutral-900 px-7 sm:px-8 py-3 text-sm text-white shadow-xl transition-all hover:bg-neutral-800 hover:scale-105 active:scale-95 w-full sm:w-auto">
-            View Selected Projects
-          </button>
-          <button className="rounded-full border border-neutral-300 bg-white/70 backdrop-blur-sm px-7 sm:px-8 py-3 text-sm font-medium text-neutral-700 transition-all hover:border-neutral-400 hover:bg-white w-full sm:w-auto">
-            Explore experience
-          </button>
-        </div>
+       
       </div>
 
       {/* ── RIGHT ORBIT (bottom-right) ── */}

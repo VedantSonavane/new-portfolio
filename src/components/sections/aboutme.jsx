@@ -129,6 +129,8 @@ export default function AboutSection() {
   return (
     <section
       ref={sectionRef}
+            id="about"
+
       className="relative w-full min-h-screen bg-[#F8FAFC] text-neutral-900 flex items-center justify-center font-['Inter','Helvetica_Neue',sans-serif]"
     >
       <div className="w-full max-w-7xl mx-auto px-5 sm:px-8 py-16 sm:py-20 grid grid-cols-1 md:grid-cols-[280px_1fr] lg:grid-cols-[300px_1fr] gap-10 sm:gap-14 lg:gap-28">
@@ -142,8 +144,8 @@ export default function AboutSection() {
             className="w-full bg-[#e5e5e5] overflow-hidden opacity-0"
             style={{ aspectRatio: "3/4" }}
           >
-            <img
-              src="https://i.pinimg.com/736x/0e/f1/fc/0ef1fc96f9f26129984e5af674d3a564.jpg"
+              <img
+              src="/src/assets/images/aboutme.jpg"
               alt="Vedant Sonavane"
               className="w-full h-full object-cover object-top grayscale block"
             />
